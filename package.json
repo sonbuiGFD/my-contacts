@@ -1,0 +1,52 @@
+{
+  "name": "MyContacts",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
+    "dev": "react-native run-android",
+    "log": "react-native log-android",
+    "test": "jest",
+    "clean": "rm -fr $TMPDIR/react-* && cd android/ && gradlew clean && cd ..",
+    "clean:android": "cd android/ && ./gradlew clean && cd ..",
+    "clean:ios": "rm -rf $TMPDIR/react-* && rm -rf ios/build",
+    "build:install": "cd android/ && gradlew installRelease && cd ..",
+    "build:release": "cd android/ && gradlew assembleRelease && cd ..",
+    "eslint": "eslint index.js ./src/*.js ./src/**/*.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-eslint": "^9.0.0",
+    "babel-preset-react-native": "^4.0.1",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-native": "^3.3.0",
+    "lodash": "^4.17.11",
+    "native-base": "^2.8.0",
+    "react": "16.5.0",
+    "react-addons-update": "^15.6.2",
+    "react-native": "0.57.0",
+    "react-navigation": "^2.16.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.45.5",
+    "react-test-renderer": "16.5.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./src/assets/fonts"
+    ]
+  }
+}
